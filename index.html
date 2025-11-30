@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: Georgia, serif;
-            background-color: #f5f5f5; /* 页面其他区域浅灰背景 */
+            background-color: #ffffff; /* 全局白底 */
             color: #222;
             text-align: center;
         }
@@ -17,36 +17,40 @@
         /* ---- 顶部标题背景区（Hero Section） ---- */
         .hero {
             width: 100%;
-            padding: 120px 20px;
+            padding: 150px 20px 160px 20px;   /* 上下 padding 调整背景高度 */
             background: url("diversear_demo_01.png") center/cover no-repeat;
-            box-shadow: inset 0 0 200px rgba(0,0,0,0.5);
+            box-shadow: inset 0 0 200px rgba(0,0,0,0.45);
             color: white;
         }
 
         /* 主标题 DiverseAR */
         .hero h1 {
-            font-size: 70px;
+            font-size: 80px;
             font-weight: 900;
             margin: 0;
-            text-shadow: 0 0 20px rgba(0,0,0,0.5);
+            text-shadow: 0 0 20px rgba(0,0,0,0.55);
             letter-spacing: 1px;
         }
 
-        /* 副标题 Boosting Diversity … */
+        /* 副标题 */
         .hero h2 {
-            font-size: 32px;
+            font-size: 34px;
             font-weight: 400;
-            margin-top: 20px;
+            margin-top: 25px;
             margin-bottom: 0;
-            text-shadow: 0 0 12px rgba(0,0,0,0.5);
+            text-shadow: 0 0 15px rgba(0,0,0,0.5);
         }
 
-        /* 作者区 */
+        /* ---- 作者区（必须是白底） ---- */
+        .content {
+            background: white;
+            padding: 60px 20px 40px 20px;
+        }
+
         .authors {
-            margin-top: 40px;
             font-size: 20px;
-            line-height: 32px;
-            color: #222;
+            line-height: 34px;
+            margin-bottom: 20px;
         }
 
         .authors a {
@@ -54,27 +58,31 @@
             text-decoration: none;
             font-weight: 600;
         }
-
         .authors a:hover {
             text-decoration: underline;
         }
 
-        /* 机构 Affiliations */
         .affiliations {
-            margin-top: 10px;
             font-size: 18px;
             color: #555;
-            line-height: 28px;
+            line-height: 30px;
+            margin-bottom: 20px;
         }
 
-        /* 底部按钮 */
+        /* 脚注样式 */
+        .footnote {
+            font-size: 15px;
+            color: #777;
+            margin-top: 5px;
+        }
+
         .buttons {
             margin-top: 40px;
         }
         .btn {
             display: inline-block;
             margin: 8px;
-            padding: 12px 30px;
+            padding: 12px 34px;
             border-radius: 8px;
             color: white;
             background: #3b3b3b;
@@ -91,39 +99,49 @@
 
 <body>
 
-    <!-- 背景只在标题区域 -->
+    <!-- 顶部背景区域 -->
     <div class="hero">
         <h1>DiverseAR</h1>
         <h2>Boosting Diversity in Bitwise Autoregressive Image Generation</h2>
     </div>
 
-    <!-- 作者 -->
-    <div class="authors">
-        <a href="#">Ying Yang<sup>1*</sup></a>,
-        <a href="#">Zhengyao Lv<sup>2*</sup></a>,
-        <a href="#">Tianlin Pan<sup>1,3</sup></a>,
-        <a href="#">Haofan Wang<sup>4</sup></a>,
-        <a href="#">Binxin Yang<sup>5</sup></a>,
-        <a href="#">Hubery Yin<sup>5</sup></a>,
-        <a href="#">Chen Li<sup>5†</sup></a>,
-        <a href="#">Jing Lyu<sup>5</sup></a>,
-        <a href="#">Chenyang Si<sup>1†</sup></a>
-    </div>
+    <!-- 白底内容区 -->
+    <div class="content">
 
-    <!-- 机构 -->
-    <div class="affiliations">
-        1 PRLab, Nanjing University &nbsp;·&nbsp;
-        2 The University of Hong Kong &nbsp;·&nbsp;
-        3 UCAS &nbsp;·&nbsp;
-        4 Lovart AI &nbsp;·&nbsp;
-        5 WeChat, Tencent Inc.
-    </div>
+        <!-- 作者 -->
+        <div class="authors">
+            <a href="#">Ying Yang<sup>1*</sup></a>,
+            <a href="#">Zhengyao Lv<sup>2*</sup></a>,
+            <a href="#">Tianlin Pan<sup>1,3</sup></a>,
+            <a href="#">Haofan Wang<sup>4</sup></a>,
+            <a href="#">Binxin Yang<sup>5</sup></a>,
+            <a href="#">Hubery Yin<sup>5</sup></a>,
+            <a href="#">Chen Li<sup>5†</sup></a>,
+            <a href="#">Jing Lyu<sup>5</sup></a>,
+            <a href="#">Chenyang Si<sup>1†</sup></a>
+        </div>
 
-    <!-- 按钮 -->
-    <div class="buttons">
-        <a class="btn" href="#">📄 Paper</a>
-        <a class="btn" href="#">📦 Code</a>
-        <a class="btn" href="#">📰 arXiv</a>
+        <!-- 机构 -->
+        <div class="affiliations">
+            1 PRLab, Nanjing University &nbsp;·&nbsp;
+            2 The University of Hong Kong &nbsp;·&nbsp;
+            3 UCAS &nbsp;·&nbsp;
+            4 Lovart AI &nbsp;·&nbsp;
+            5 WeChat, Tencent Inc.
+        </div>
+
+        <!-- 脚注 -->
+        <div class="footnote">
+            * Equal Contribution. &nbsp;&nbsp; † Corresponding Author.
+        </div>
+
+        <!-- 按钮 -->
+        <div class="buttons">
+            <a class="btn" href="#">📄 Paper</a>
+            <a class="btn" href="#">📦 Code</a>
+            <a class="btn" href="#">📰 arXiv</a>
+        </div>
+
     </div>
 
 </body>
