@@ -9,52 +9,42 @@
             margin: 0;
             padding: 0;
             font-family: Georgia, serif;
-            background-color: #ffffff; /* 全局白底 */
+            background-color: #ffffff;
             color: #222;
             text-align: center;
         }
 
-        /* ---- 顶部标题背景区（Hero Section） ---- */
+        /* ---- 顶部标题+作者背景区（Hero Section） ---- */
         .hero {
             width: 100%;
-            padding: 150px 20px 160px 20px;   /* 上下 padding 调整背景高度 */
+            padding: 150px 20px 120px 20px;
             background: url("diversear_demo_01.png") center/cover no-repeat;
             box-shadow: inset 0 0 200px rgba(0,0,0,0.45);
             color: white;
         }
 
-        /* 主标题 DiverseAR */
         .hero h1 {
             font-size: 80px;
             font-weight: 900;
             margin: 0;
             text-shadow: 0 0 20px rgba(0,0,0,0.55);
-            letter-spacing: 1px;
         }
 
-        /* 副标题 */
         .hero h2 {
             font-size: 34px;
             font-weight: 400;
             margin-top: 25px;
-            margin-bottom: 0;
-            text-shadow: 0 0 15px rgba(0,0,0,0.5);
-        }
-
-        /* ---- 作者区（必须是白底） ---- */
-        .content {
-            background: white;
-            padding: 60px 20px 40px 20px;
+            margin-bottom: 35px;
+            text-shadow: 0 0 12px rgba(0,0,0,0.55);
         }
 
         .authors {
-            font-size: 20px;
-            line-height: 34px;
-            margin-bottom: 20px;
+            font-size: 22px;
+            line-height: 36px;
         }
 
         .authors a {
-            color: #0033cc;
+            color: #d1e2ff;       /* 浅蓝色，在深背景可见 */
             text-decoration: none;
             font-weight: 600;
         }
@@ -63,22 +53,24 @@
         }
 
         .affiliations {
-            font-size: 18px;
-            color: #555;
+            font-size: 19px;
             line-height: 30px;
-            margin-bottom: 20px;
+            color: #e6e6e6;
+            margin-top: 15px;
         }
 
-        /* 脚注样式 */
         .footnote {
-            font-size: 15px;
-            color: #777;
-            margin-top: 5px;
+            margin-top: 15px;
+            font-size: 16px;
+            color: #f0f0f0;
         }
 
-        .buttons {
-            margin-top: 40px;
+        /* 底部按钮（白色底） */
+        .content {
+            background: white;
+            padding: 50px 20px 40px 20px;
         }
+
         .btn {
             display: inline-block;
             margin: 8px;
@@ -94,19 +86,16 @@
             background: #6a6a6a;
             transform: translateY(-2px);
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- 顶部背景区域 -->
+    <!-- 背景区：标题 + 作者 -->
     <div class="hero">
         <h1>DiverseAR</h1>
         <h2>Boosting Diversity in Bitwise Autoregressive Image Generation</h2>
-    </div>
-
-    <!-- 白底内容区 -->
-    <div class="content">
 
         <!-- 作者 -->
         <div class="authors">
@@ -135,14 +124,14 @@
             * Equal Contribution. &nbsp;&nbsp; † Corresponding Author.
         </div>
 
-        <!-- 按钮 -->
-        <div class="buttons">
+        <div class="content">
             <a class="btn" href="#">📄 Paper</a>
             <a class="btn" href="#">📦 Code</a>
             <a class="btn" href="#">📰 arXiv</a>
         </div>
-
     </div>
+
+
 
 </body>
 </html>
