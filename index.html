@@ -70,22 +70,30 @@
             background: white;
             padding: 50px 20px 40px 20px;
         }
-
-        .btn {
+        .hero-buttons {
+            margin-top: 40px;
+        }
+        
+        .hero-buttons .btn {
             display: inline-block;
             margin: 8px;
             padding: 12px 34px;
             border-radius: 8px;
             color: white;
-            background: #3b3b3b;
+            background: rgba(0,0,0,0.55);
+            border: 1px solid white;
             text-decoration: none;
             font-size: 18px;
+            backdrop-filter: blur(3px);
             transition: 0.2s;
         }
-        .btn:hover {
-            background: #6a6a6a;
+        
+        .hero-buttons .btn:hover {
+            background: rgba(255,255,255,0.4);
             transform: translateY(-2px);
         }
+
+
 
     </style>
 </head>
@@ -124,7 +132,8 @@
             * Equal Contribution. &nbsp;&nbsp; † Corresponding Author.
         </div>
 
-        <div class="content">
+        <!-- 按钮组，放到背景区 -->
+        <div class="hero-buttons">
             <a class="btn" href="#">📄 Paper</a>
             <a class="btn" href="#">📦 Code</a>
             <a class="btn" href="#">📰 arXiv</a>
