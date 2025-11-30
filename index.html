@@ -23,7 +23,6 @@
 
             /* 背景图 */
             background: url("diversear_demo_01.png") center/cover no-repeat;
-            box-shadow: inset 0 0 200px rgba(0,0,0,0.45);
 
             /* 垂直水平居中 */
             display: flex;
@@ -112,20 +111,23 @@
 /* 外层背景：浅灰色，制造上下带 */
 .section-wrapper {
     width: 100%;
-    background: #f5f5f5;              /* 浅灰 */
-    padding: 60px 0;                  /* 上下留白 */
-    margin: 0;                        /* section间距自动 */
+    padding: 60px 0;  /* 只要上下留白，不要背景 */
 }
+.section-divider-line {
+    width: 100%;
+    border-top: 1.5px dashed #ccc;  /* 浅灰虚线 */
+    margin: 40px auto;              /* 上下留白 */
+}
+
 
 /* 内层内容：白色卡片 */
 .section {
     background: white;
     width: 100%;
-    max-width: 1200px;
     background: white;       /* 整条白色，不是小卡片 */
     margin: 0 auto;
     padding: 60px 70px;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    : 0 1px 8px rgba(0,0,0,0.05);
     border-radius: 10px;
     text-align: center;
 }
@@ -164,7 +166,6 @@
     width: 90%;
     height: 90%;
     border-radius: 12px;
-    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
 }
 
 .video-button:hover {
@@ -244,7 +245,7 @@
 
 
     <!-- ===================== Video Section ===================== -->
-<div class="section-wrapper">
+<div class="section-divider-line"></div>
 <div class="section">
     <h2 class="section-title">Video Presentation</h2>
     <div class="section-divider"></div>
@@ -262,7 +263,8 @@
 </div>
 
 <!-- ===================== Abstract Section ===================== -->
-    <div class="section-wrapper">
+<div class="section-divider-line"></div>
+
 <div class="section">
     <h2 class="section-title">Abstract</h2>
     <div class="section-divider"></div>
