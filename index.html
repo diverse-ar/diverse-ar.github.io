@@ -109,7 +109,47 @@
             transform: translateY(-2px);
         }
 
+/* -------- White-content Sections -------- */
+.section {
+    padding: 80px 20px;
+    background: white;
+    text-align: center;
+}
 
+/* Section Title */
+.section-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Red Divider Line */
+.section-divider {
+    width: 90px;
+    height: 4px;
+    background: #d64545;
+    margin: 20px auto 40px auto;
+    border-radius: 2px;
+}
+
+/* Video Button */
+.video-button {
+    display: inline-block;
+    background: #d64545;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.video-button:hover {
+    background: #f05a5a;
+    transform: translateY(-2px);
+}
 
     </style>
 </head>
@@ -156,11 +196,16 @@
         </div>
     </div>
 
-    <!-- 白色正文区域（用于内容） -->
-    <div class="content">
-        This is the main body section.<br>
-        You can place introduction, method diagram, videos, image results, etc here.
-    </div>
+<!-- ===================== Video Section ===================== -->
+<div class="section">
+    <h2 class="section-title">Video Presentation</h2>
+    <div class="section-divider"></div>
+
+    <a class="video-button" href="https://www.youtube.com/watch?v=uGoDNkp9F4E" target="_blank">
+        ▶ Watch on YouTube
+    </a>
+</div>
+
 
 </body>
 </html>
