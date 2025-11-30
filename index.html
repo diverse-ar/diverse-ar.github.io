@@ -15,17 +15,28 @@
         }
 
         /* ---- 顶部标题+作者背景区（Hero Section） ---- */
+        /* ---- 全屏 Hero：100vh ---- */
         .hero {
+            height: 100vh;  /* ★ 占满整屏 */
             width: 100%;
-            padding: 150px 20px 120px 20px;
+            padding: 0 20px;
+
+            /* 背景图 */
             background: url("diversear_demo_01.png") center/cover no-repeat;
             box-shadow: inset 0 0 200px rgba(0,0,0,0.45);
+
+            /* 垂直水平居中 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 垂直居中 */
+            align-items: center;     /* 水平居中 */
+
             color: white;
         }
 
         .hero h1 {
-            font-size: 60px;
-            font-weight: 700;
+            font-size: 50px;
+            font-weight: 600;
             margin: 0;
             text-shadow: 0 0 20px rgba(0,0,0,0.55);
         }
