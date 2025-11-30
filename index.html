@@ -176,7 +176,7 @@
 
 /* 摘要段落 */
 .abstract-text {
-    font-size: 21px;
+    font-size: 25px;
     line-height: 34px;
     text-align: left;
     color: #333;
@@ -257,12 +257,10 @@
         in bitwise AR models and identify two key issues: <b>1)</b> the binary classification nature of bitwise
         modeling, which restricts the prediction space, and <b>2)</b> the overly-sharp logits distribution,
         which causes sampling collapse and reduces diversity.
-        <br><br>
         Built on these insights, we propose <b>DiverseAR</b>, a principled and effective method that enhances
         image diversity without sacrificing visual quality. Specifically, we introduce an adaptive logits
         distribution scaling mechanism that dynamically adjusts the sharpness of the binary output distribution
         across different sampling steps, resulting in a smoother prediction distribution and improved diversity.
-        <br><br>
         To mitigate the potential fidelity loss caused by distribution smoothing, we further develop an
         energy-based generation path search algorithm that avoids sampling low-confidence tokens, thereby
         preserving high visual quality. Extensive experiments highlight that DiverseAR can unlock greater
