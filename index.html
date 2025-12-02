@@ -9,27 +9,21 @@
             margin: 0;
             padding: 0;
             font-family: Georgia, serif;
-            background-color: #ffffff;
+            background: #ffffff;
             color: #222;
             text-align: center;
         }
 
-        /* ---- 顶部标题+作者背景区（Hero Section） ---- */
-        /* ---- 全屏 Hero：100vh ---- */
+        /* ---------------- HERO SECTION ---------------- */
         .hero {
-            height: 100vh;  /* ★ 占满整屏 */
+            height: 100vh;
             width: 100%;
             padding: 0 20px;
-
-            /* 背景图 */
             background: url("diversear_demo_01.png") center/cover no-repeat;
-
-            /* 垂直水平居中 */
             display: flex;
             flex-direction: column;
-            justify-content: center; /* 垂直居中 */
-            align-items: center;     /* 水平居中 */
-
+            justify-content: center;
+            align-items: center;
             color: white;
         }
 
@@ -42,7 +36,6 @@
 
         .hero h2 {
             font-size: 45px;
-            font-weight: 550;
             margin-top: 25px;
             margin-bottom: 35px;
             text-shadow: 0 0 12px rgba(0,0,0,0.55);
@@ -50,11 +43,10 @@
 
         .authors {
             font-size: 24px;
-            line-height: 38px;
+            line-height: 36px;
         }
-
         .authors a {
-            color: #d1e2ff;       /* 浅蓝色，在深背景可见 */
+            color: #d1e2ff;
             text-decoration: none;
             font-weight: 650;
         }
@@ -64,31 +56,19 @@
 
         .affiliations {
             font-size: 22px;
-            line-height: 32px;
+            margin-top: 12px;
             color: #e6e6e6;
-            margin-top: 15px;
         }
 
         .footnote {
-            margin-top: 15px;
             font-size: 16px;
+            margin-top: 12px;
             color: #f0f0f0;
         }
 
-        /* ---- 白色正文区（恢复 content） ---- */
-        .content {
-            background: white;
-            padding: 50px 20px 60px 20px;
-            font-size: 22px;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 32px;
-        }
-
         .hero-buttons {
-            margin-top: 40px;
+            margin-top: 35px;
         }
-        
         .hero-buttons .btn {
             display: inline-block;
             margin: 8px;
@@ -102,117 +82,66 @@
             backdrop-filter: blur(3px);
             transition: 0.2s;
         }
-        
         .hero-buttons .btn:hover {
             background: rgba(255,255,255,0.4);
             transform: translateY(-2px);
         }
 
-/* 外层背景：浅灰色，制造上下带 */
-.section-wrapper {
-    width: 100%;
-    padding: 60px 0;  /* 只要上下留白，不要背景 */
-}
-.divider {
-    width: 100%;
-    height: 1px;
-    background: rgba(150, 170, 200, 0.35); /* 非常淡的蓝灰色 */
-    margin: 30px 0 15px 0;  /* 上 40px，下 25px（让标题更靠近）*/
-}
+        /* ---------------- SECTION UTILITIES ---------------- */
+        .section-divider-line {
+            width: 100%;
+            height: 1px;
+            background: rgba(160,185,220,0.35);
+            margin: 0;
+        }
 
+        .section {
+            padding: 20px 10px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
 
-/* 内层内容：白色卡片 */
-.section {
-    background: white;
-    width: 100%;
-    background: white;       /* 整条白色，不是小卡片 */
-    margin: 0 auto;
-    padding: 10px 10px;
-    : 0 1px 8px rgba(0,0,0,0.05);
-    border-radius: 10px;
-    text-align: center;
-}
-/* 小节标题 */
-.section-title {
-    font-size: 42px;
-    font-weight: 700;
-    color: #222;
-}
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: #d64545;
+            margin: 10px auto 20px;
+        }
 
-/* 红色小横线 */
-.section-divider {
-    width: 90px;
-    height: 4px;
-    background: #d64545;
-    margin: 18px auto 30px;   /* 下方留更大的空隙 */
-    border-radius: 2px;
-}
- .section-divider-line {
-    width: 100%;
-    height: 1px;
-    background: rgba(160, 185, 220, 0.35); /* 淡蓝 */
-    margin: 35px 0 20px 0;   /* 上下间距小很多 */
-}
+        /* ---------------- VIDEO SECTION ---------------- */
+        .video-container {
+            width: 60%;
+            aspect-ratio: 16/9;
+            margin: 0 auto;
+        }
 
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
 
-
-/* 视频容器：保持 16:9 正确比例 */
-.video-container {
-    position: relative;
-    width: 80%;
-    padding-bottom: 65.5%;   /* 修复视频比例：16:9 = 56.25% */
-    height: 0;
-    margin: 0 auto;
-}
-
-/* 让视频填满容器 */
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    height: 70%;
-    border-radius: 12px;
-}
-
-.video-button:hover {
-    background: #f05a5a;
-    transform: translateY(-2px);
-}
- <!-- ===================== Video Section ===================== -->
-<div class="section">
-    <h2 class="section-title">Video Presentation</h2>
-    <div class="section-divider"></div>
-
-    <div class="video-container">
-        <iframe
-            src="https://www.youtube.com/embed/uGoDNkp9F4E"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
-
-/* 摘要段落 */
-.abstract-text {
-    font-size: 26px;     /* 大字体 */
-    line-height: 38px;   /* 合理行距 */
-    max-width: 55%;      /* 约半页 */
-    margin: 0 auto;
-    text-align: left;
-    padding-bottom: 20px;
-}
-
+        /* ---------------- ABSTRACT SECTION ---------------- */
+        .abstract-text {
+            font-size: 26px;
+            line-height: 38px;
+            max-width: 55%;
+            margin: 20px auto 40px;
+            text-align: left;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- 背景区：标题 + 作者 -->
+    <!-- ---------------- HERO ---------------- -->
     <div class="hero">
         <h1>DiverseAR</h1>
         <h2>Boosting Diversity in Bitwise Autoregressive Image Generation</h2>
@@ -232,19 +161,19 @@
 
         <!-- 机构 -->
         <div class="affiliations">
-            1 PRLab, Nanjing University &nbsp;·&nbsp;
-            2 The University of Hong Kong &nbsp;·&nbsp;
-            3 UCAS &nbsp;·&nbsp;
-            4 Lovart AI &nbsp;·&nbsp;
+            1 PRLab, Nanjing University ·
+            2 The University of Hong Kong ·
+            3 UCAS ·
+            4 Lovart AI ·
             5 WeChat, Tencent Inc.
         </div>
 
         <!-- 脚注 -->
         <div class="footnote">
-            * Equal Contribution. &nbsp;&nbsp; † Corresponding Author.
+            * Equal Contribution  † Corresponding Author
         </div>
 
-        <!-- 按钮组，放到背景区 -->
+        <!-- 按钮 -->
         <div class="hero-buttons">
             <a class="btn" href="#">📄 Paper</a>
             <a class="btn" href="#">📦 Code</a>
@@ -252,49 +181,37 @@
         </div>
     </div>
 
+    <!-- ---------------- VIDEO SECTION ---------------- -->
+    <div class="section-divider-line"></div>
 
-    <!-- ===================== Video Section ===================== -->
-<div class="section-divider-line"></div>
-<div class="section">
-    <h2 class="section-title">Video Presentation</h2>
-    <div class="section-divider"></div>
+    <div class="section">
+        <h2 class="section-title">Video Presentation</h2>
+        <div class="section-divider"></div>
 
-    <div class="video-container">
-        <iframe
-            src="https://www.youtube.com/embed/uGoDNkp9F4E"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/uGoDNkp9F4E"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
-</div>
-</div>
 
-<!-- ===================== Abstract Section ===================== -->
-<div class="section-divider-line"></div>
+    <!-- ---------------- ABSTRACT SECTION ---------------- -->
+    <div class="section-divider-line"></div>
 
-<div class="section">
-    <h2 class="section-title">Abstract</h2>
-    <div class="section-divider"></div>
+    <div class="section">
+        <h2 class="section-title">Abstract</h2>
+        <div class="section-divider"></div>
 
-    <p class="abstract-text">
-        In this paper, we investigate the underexplored challenge of sample diversity in autoregressive (AR)
-        generative models with bitwise visual tokenizers. We initially analyze the factors limiting diversity
-        in bitwise AR models and identify two key issues: <b>1)</b> the binary classification nature of bitwise
-        modeling, which restricts the prediction space, and <b>2)</b> the overly-sharp logits distribution,
-        which causes sampling collapse and reduces diversity.
-        Built on these insights, we propose <b>DiverseAR</b>, a principled and effective method that enhances
-        image diversity without sacrificing visual quality. Specifically, we introduce an adaptive logits
-        distribution scaling mechanism that dynamically adjusts the sharpness of the binary output distribution
-        across different sampling steps, resulting in a smoother prediction distribution and improved diversity.
-        To mitigate the potential fidelity loss caused by distribution smoothing, we further develop an
-        energy-based generation path search algorithm that avoids sampling low-confidence tokens, thereby
-        preserving high visual quality. Extensive experiments highlight that DiverseAR can unlock greater
-        diversity in bitwise autoregressive image generation.
-    </p>
-</div>
-</div>
+        <p class="abstract-text">
+            In this paper, we investigate the underexplored challenge of sample diversity in autoregressive (AR)
+            generative models with bitwise visual tokenizers. We initially analyze the factors limiting diversity
+            in bitwise AR models and identify two key issues: (1) the binary classification nature of bitwise
+            modeling, and (2) the overly-sharp logits distribution which causes sampling collapse...
+        </p>
+    </div>
 
 </body>
 </html>
