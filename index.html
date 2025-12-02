@@ -139,6 +139,28 @@
             margin: 20px auto 25px;
             text-align: left;
         }
+    .framework-container {
+        width: 85%;
+        max-width: 950px;
+        margin: 0 auto 20px auto;
+    }
+    
+    .framework-container embed {
+        width: 100%;
+        height: 520px;   /* 可调 */
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+    
+    .framework-text {
+        max-width: 60%;
+        margin: 20px auto;
+        font-size: 22px;
+        line-height: 34px;
+        color: #444;
+        text-align: left;
+    }
+
     </style>
 </head>
 
@@ -210,10 +232,10 @@
             In this paper, we investigate the underexplored challenge of sample diversity in 
             autoregressive (AR) generative models with bitwise visual tokenizers. 
             We initially analyze the factors limiting diversity in bitwise AR models 
-            and identify two key issues: (1) the binary classification nature of
-            bitwise modeling, which restricts the prediction space, and (2)
-            the overly-sharp logits distribution, which causes sampling collapse and reduces diversity. 
-            Built on these insights, we propose DiverseAR, a principle and effective method 
+            and identify two key issues:<strong>(1) the binary classification nature of
+            bitwise modeling, which restricts the prediction space</strong>, and <strong>(2)
+            the overly-sharp logits distribution, which causes sampling collapse and reduces diversity</strong>. 
+            Built on these insights, we propose <strong>DiverseAR</strong>, a principle and effective method 
             that enhances image diversity without sacrificing visual quality. Specifically, 
             we introduce an adaptive logits distribution scaling mechanism that dynamically 
             adjusts the sharpness of the binary output distribution across different sampling steps, 
@@ -224,6 +246,29 @@
             highlight that DiverseAR can unlock greater diversity in bitwise autoregressive image generation.
         </p>
     </div>
+
+    <!-- ---------------- FRAMEWORK SECTION ---------------- -->
+<div class="section-divider-line"></div>
+
+<div class="section">
+    <h2 class="section-title">DiverseAR Framework</h2>
+    <div class="section-divider"></div>
+
+    <!-- 展示 PDF 图 -->
+    <div class="framework-container">
+        <embed src="https://github.com/diverse-ar/diverse-ar.github.io/blob/main/diverse3.pdf"
+               type="application/pdf">
+    </embed>
+    </div>
+
+    <!-- 图下文字 -->
+    <p class="framework-text">
+        <strong>DiverseAR</strong> is an effective approach that enhances image and video diversity in
+        <strong>bitwise autoregressive modeling</strong> without sacrificing visual quality.  
+        It introduces adaptive logits smoothing and an energy-based generation path selection strategy,
+        enabling richer sampling behaviors while maintaining fidelity.
+    </p>
+</div>
 
 </body>
 </html>
