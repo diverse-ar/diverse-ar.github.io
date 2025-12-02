@@ -255,37 +255,37 @@
     </div>
 
 
-    <!-- ---------------- DIVERSITY SECTION ---------------- -->
+<!-- ---------------- DIVERSITY SECTION ---------------- -->
 <div class="section-divider-line"></div>
 
 <div class="section">
     <h2 class="section-title">Why Bitwise AR Model Degrades Diversity?</h2>
     <div class="section-divider"></div>
 
-    <!-- 漂浮卡片图 -->
-    <div class="floating-container">
+    <!-- 图片（使用和 framework 一样的样式） -->
+    <div class="framework-container">
         <img src="https://github.com/diverse-ar/diverse-ar.github.io/raw/main/diverse5_01.png"
-             class="floating-image">
+             class="framework-image">
     </div>
 
-    <!-- 极简解释文本 -->
-    <p class="diversity-text">
+    <!-- 描述文字（使用和 framework-text 一样的风格） -->
+    <p class="framework-text">
         In bitwise autoregressive models, the predicted probabilities often become 
         <strong>overly peaked</strong>, giving one class <strong>near-certain confidence</strong>. 
-        This causes <strong>top-p sampling to collapse into a deterministic choice</strong>, 
-        removing randomness across the trajectory. 
-        As shown in the <strong>two subplots above</strong>, this 
-        <strong>collapse of bit-level randomness</strong> restricts feature variation, and the lack 
-        of diversity mainly arises from <strong>(1) the binary classification nature</strong>
-        of bitwise modeling and <strong>(2) the overconfident output distributions</strong>.
+        This causes <strong>top-p sampling to collapse into a deterministic choice</strong>, removing randomness.  
+        As shown in the <strong>two subplots above</strong>, this <strong>collapse of bit-level randomness</strong> 
+        restricts feature variation, and diversity degradation mainly arises from 
+        <strong>(1) the binary classification nature</strong> of bitwise modeling and 
+        <strong>(2) the overconfident output distributions</strong>.
     </p>
 
-    <!-- 单独一行英文说明 -->
-    <p class="diversity-text" style="font-style: italic; margin-top: 18px;">
+    <!-- 单独一行的英文说明 -->
+    <p class="framework-text" style="font-style: italic; margin-top: 18px;">
         Visual Autoregressive Modeling (VAR) does not inherently lack diversity; 
         the limitation primarily arises from bitwise tokenization.
     </p>
 </div>
+
 <!-- ---------------- FRAMEWORK SECTION ---------------- -->
 <div class="section-divider-line"></div>
 
