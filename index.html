@@ -205,6 +205,52 @@
         text-align: left;
     }
 
+/* BibTeX 区域：保持左对齐，宽度限制在 900px */
+.bibtex-wrapper {
+    width: 90%;
+    max-width: 1000px;  
+    margin: 0 auto 40px auto;
+    position: relative;
+    text-align: left;
+}
+
+/* BibTeX 代码框 */
+.bibtex-box {
+    background: #f7f9fc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    font-size: 14px;
+    line-height: 20px;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+/* 右上角 Copy 按钮 */
+.copy-btn {
+    position: absolute;
+    top: -12px;
+    right: 0;
+    background: #4a6cff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.copy-btn:hover {
+    background: #6b82ff;
+}
+
+/* 标题左对齐 */
+.bibtex-title {
+    text-align: left !important;
+}
+
+
+
     </style>
 </head>
 
@@ -505,57 +551,38 @@
 <!-- ---------------- BIBTEX SECTION ---------------- -->
 <div class="section-divider-line"></div>
 
-<div class="section" id="bibtex" style="text-align: left;">
 
-    <h2 class="section-title" style="margin-left: 0;">📚 BibTeX</h2>
-    <div class="section-divider" style="margin-left: 0;"></div>
+<!-- ---------------- BIBTEX SECTION ---------------- -->
+<div class="section">
+    <h2 class="section-title bibtex-title">📚 BibTeX</h2>
+    <div class="section-divider"></div>
 
-    <!-- BibTeX 区域容器：控制整体宽度 -->
-    <div style="
-        max-width: 1000px;     /* ⭐ 限制最大宽度（你想调就改这里） */
-        width: 90%;           /* 小屏自适应 */
-        margin: 0 auto;       /* ⭐ 保持居中 */
-    ">
+    <div class="bibtex-wrapper">
+        <button class="copy-btn" onclick="copyBibtex()">📄 Copy</button>
 
-        <div class="bibtex-box" style="
-            background: #f7f9fc;
-            border-radius: 10px;
-            padding: 18px 22px;
-            margin-top: 10px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-            position: relative;
-        ">
-
-            <!-- 复制按钮 -->
-            <button style="
-                position: absolute;
-                top: 12px;
-                right: 12px;
-                background: #4a76ff;
-                color: white;
-                border: none;
-                padding: 6px 14px;
-                border-radius: 6px;
-                font-size: 14px;
-                cursor: pointer;
-            " onclick="navigator.clipboard.writeText(bibtex_text.innerText)">📄 Copy</button>
-
-            <pre id="bibtex_text" style="
-                white-space: pre-wrap;
-                font-size: 15px;
-                margin: 0;
-                line-height: 22px;
-            ">
+        <pre class="bibtex-box">
 @article{yang2025diversear,
-  title={DiverseAR: Boosting Diversity in Bitwise Autoregressive Image Generation},
-  author={Yang, Ying and Lv, Zhengyao and Pan, Tianlin and Wang, Haofan and Yang, Binxin and Yin, Hubery and Li, Chen and Si, Chenyang},
-  journal={arXiv preprint arXiv:2512.02931},
+  title={DiverseAR: Boosting Diversity in Bitwise Autoregressive Image Generation}, 
+  author={Yang, Ying and Lv, Zhengyao and Pan, Tianlin and Wang, Haofan and Yang, Binxin and Yin, Hubery and Li, Chen and Si, Chenyang}, 
+  journal={arXiv preprint arXiv:2512.02931}, 
   year={2025}
 }
-            </pre>
-        </div>
+        </pre>
     </div>
 </div>
+
+<script>
+function copyBibtex() {
+    const text = `@article{yang2025diversear,
+  title={DiverseAR: Boosting Diversity in Bitwise Autoregressive Image Generation}, 
+  author={Yang, Ying and Lv, Zhengyao and Pan, Tianlin and Wang, Haofan and Yang, Binxin and Yin, Hubery and Li, Chen and Si, Chenyang}, 
+  journal={arXiv preprint arXiv:2512.02931}, 
+  year={2025}
+}`;
+    navigator.clipboard.writeText(text);
+    alert("BibTeX copied!");
+}
+</script>
 
 
 
