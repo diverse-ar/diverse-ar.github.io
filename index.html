@@ -502,6 +502,77 @@
     </p>
 </div>
 
+<!-- ---------------- BIBTEX SECTION ---------------- -->
+<div class="section-divider-line"></div>
+
+<div class="section" id="bibtex">
+    <h2 class="section-title">📚 BibTeX</h2>
+    <div class="section-divider"></div>
+
+    <div class="bibtex-container">
+        <button class="copy-btn" onclick="copyBibtex()">📋 Copy</button>
+
+<pre id="bibtex-code">@article{yang2025diversear,
+  title={DiverseAR: Boosting Diversity in Bitwise Autoregressive Image Generation},
+  author={Yang, Ying and Lv, Zhengyao and Pan, Tianlin and Wang, Haofan and Yang, Binxin and Yin, Hubery and Li, Chen and Si, Chenyang},
+  journal={arXiv preprint arXiv:2512.02931},
+  year={2025}
+}</pre>
+
+    </div>
+</div>
+
+<style>
+/* BibTeX 代码框 */
+.bibtex-container {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #f7f9fc;
+    border: 1px solid #d3d6de;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* BibTeX 文本 */
+.bibtex-container pre {
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 22px;
+    overflow-x: auto;
+}
+
+/* Copy 按钮 */
+.copy-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 8px 16px;
+    background: #4c7dff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.copy-btn:hover {
+    background: #6b92ff;
+}
+</style>
+
+<script>
+function copyBibtex() {
+    const text = document.getElementById("bibtex-code").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard!");
+    });
+}
+</script>
 
 
 </body>
